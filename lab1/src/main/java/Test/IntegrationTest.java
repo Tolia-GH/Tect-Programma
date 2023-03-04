@@ -31,20 +31,20 @@ public class IntegrationTest {
 
     @BeforeEach
     void init() throws Exception {
-        hb1 = new HyperintelligentBeing("James", Gender.MALE, 99, 202, 110);
-        hb2 = new HyperintelligentBeing("Siyuan", Gender.MALE, 100, 183, 90);
-        hb3 = new HyperintelligentBeing("Olya", Gender.FEMALE, 65, 170, 56);
+        hb1 = new HyperintelligentBeing("John", Gender.MALE, 99, 202, 110);
+        hb2 = new HyperintelligentBeing("Su", Gender.MALE, 100, 183, 90);
+        hb3 = new HyperintelligentBeing("Elena", Gender.FEMALE, 65, 170, 56);
         hb4 = new HyperintelligentBeing("Max", Gender.MALE,99, 193, 95);
         hb5 = new HyperintelligentBeing("Klimenkov", Gender.MALE,99, 202, 110);
 
         hb6 = new HyperintelligentBeing("Arina", Gender.FEMALE, 10, 165, 50);
-        hb7 = new HyperintelligentBeing("Siri", Gender.MALE, 20, 15, 1);
+        hb7 = new HyperintelligentBeing("Tom", Gender.MALE, 20, 15, 1);
         hb8 = new HyperintelligentBeing("Egor", Gender.MALE, 75, 210, 130);
-        hb9 = new HyperintelligentBeing("Abdalla", Gender.MALE, 20,202, 110);
+        hb9 = new HyperintelligentBeing("Sion", Gender.MALE, 20,202, 110);
         hb10 = new HyperintelligentBeing("Andrey", Gender.MALE, 10, 178, 76);
 
         team1 = new Team();
-        team1.setName("PBC CSKA Moscow");
+        team1.setName("Team A");
         team1.addMember(hb1);
         team1.addMember(hb2);
         team1.addMember(hb3);
@@ -52,7 +52,7 @@ public class IntegrationTest {
         team1.addMember(hb5);
 
         team2 = new Team();
-        team2.setName("Wakanda forever");
+        team2.setName("Team B");
         team2.addMember(hb6);
         team2.addMember(hb7);
         team2.addMember(hb8);
