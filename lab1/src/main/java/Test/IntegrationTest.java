@@ -40,7 +40,7 @@ public class IntegrationTest {
         hb6 = new HyperintelligentBeing("Arina", Gender.FEMALE, 10, 165, 50);
         hb7 = new HyperintelligentBeing("Siri", Gender.MALE, 20, 15, 1);
         hb8 = new HyperintelligentBeing("Egor", Gender.MALE, 75, 210, 130);
-        hb9 = new HyperintelligentBeing("Abdalla", Gender.INTERSEX, 20,202, 110);
+        hb9 = new HyperintelligentBeing("Abdalla", Gender.MALE, 20,202, 110);
         hb10 = new HyperintelligentBeing("Andrey", Gender.MALE, 10, 178, 76);
 
         team1 = new Team();
@@ -85,6 +85,8 @@ public class IntegrationTest {
             Exception e4 = assertThrows(IllegalArgumentException.class, () -> testObj.setIntelligence(-1));
             assertEquals("Intelligence value must greater than 0.", e4.getMessage());
 
+            Exception e5 = assertThrows(IllegalArgumentException.class,()->testObj.setWeight(-55));
+            assertEquals("Weight must be greater than zero!",e5.getMessage());
         }
 
         @Test
