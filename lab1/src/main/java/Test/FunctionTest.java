@@ -16,7 +16,7 @@ public class FunctionTest {
 
     @DisplayName("Test for arcsin")
     @ParameterizedTest
-    @ValueSource(doubles = {-1,-0.9, -0.75, -0.5,-0.4, -0.25, 0, 0.25,0.4, 0.5, 0.75,0.9, 1})
+    @ValueSource(doubles = {-1,-0.95, -0.9, -0.75, -0.5,-0.4, -0.25, 0, 0.25,0.4, 0.5, 0.75,0.9, 0.95, 1})
     public void testArcsin(double x){
         double actual = cal.arcsin(x);
         double except = Math.asin(x);
