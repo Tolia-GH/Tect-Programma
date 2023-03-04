@@ -117,6 +117,16 @@ public class IntegrationTest {
         }
 
         @Test
+        @DisplayName("Check deleteRandomMembers function will get right result")
+        void checkDeleteRandomMembersResult(){
+            Team team3 = new Team();
+            team3.addMember(hb1);
+            team3.addMember(hb2);
+            team3.deleteRandomMembers(1);
+            assertEquals(1,team3.getTeamSize());
+        }
+
+        @Test
         @DisplayName("Check add member to null arraylist.")
         void checkAddMemberToNullArrayList() throws Exception {
             Team testTeam = new Team();
@@ -158,11 +168,12 @@ public class IntegrationTest {
 
         @Test
         @DisplayName("Test for playing by itself")
-        void checkPlay(){
+        void checkPlayWithItself(){
             game.setTeam2(team1);
             Exception e = assertThrows(RuntimeException.class, ()->game.play());
             assertEquals("One team can't play with itself.", e.getMessage());
         }
+
 
         @Test
         @DisplayName("Check if there is only one group.")
