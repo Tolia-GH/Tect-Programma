@@ -7,7 +7,7 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 
 public class DFSTest {
-    @DisplayName("Test for DFS")
+    @DisplayName("Test for DFS. Start point is considered as parameter")
     @ParameterizedTest
     @ValueSource(ints = {0,1,2,3,4,5,6,7})
     public void testGraph1(int i) {
@@ -26,7 +26,7 @@ public class DFSTest {
         dfs.solve(map, i);
         Assertions.assertArrayEquals(answers[i], dfs.getParent());
     }
-    @DisplayName("Test for DFS")
+    @DisplayName("Test for DFS. Start point is considered as parameter")
     @ParameterizedTest
     @ValueSource(ints = {0,1,2,3,4,5,6,7})
     public void testGraph2(int i) {
