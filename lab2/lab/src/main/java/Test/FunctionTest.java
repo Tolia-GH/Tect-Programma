@@ -58,7 +58,7 @@ public class FunctionTest {
         Equtions equtions = new Equtions();
         final Double ACC = 1.0;
         @ParameterizedTest
-        @ValueSource(doubles ={5,7})
+        @ValueSource(doubles ={5,7,10,-100,0,55})
         void testEqutions(double x){
             assertEquals(equtions.answer(x),equtions.run(x,ACC),ACC);
         }

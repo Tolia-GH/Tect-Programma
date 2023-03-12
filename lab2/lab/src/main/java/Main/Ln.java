@@ -15,7 +15,7 @@ public class Ln extends Function{
         double y = (x-1)/(x+1);
         double currentResult = 2*y*(Math.pow(y,2)/3+1);
         double exp = currentResult;
-        while(Math.abs(exp) >= exc/1000){
+        while(Math.abs(exp) >= exc/100000){
             k++;
             exp =  2*y*((Math.pow(y,2*k))/(double)(2*k+1));
             currentResult = currentResult + exp;

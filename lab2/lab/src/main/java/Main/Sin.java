@@ -25,7 +25,7 @@ public class Sin extends Function{
         double c = Math.pow(x,3);
         int k = 1;
         double currentResult = a*c/b + x;
-        while(Math.abs(currentResult - lastResult) >= exc/1000){
+        while(Math.abs(currentResult - lastResult) >= exc/100000){
             k++;
             a = Math.pow(-1,k);
             b = fact(2*k+1);

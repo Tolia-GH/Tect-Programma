@@ -25,7 +25,7 @@ public class Cos extends Function{
         double c = Math.pow(x,2);
         int k = 1;
         double currentResult = a*c/b + 1;
-        while(Math.abs(currentResult - lastResult) >= exc/1000){
+        while(Math.abs(currentResult - lastResult) >= exc/100000){
             k++;
             a = Math.pow(-1,k);
             b = fact(2*k);
