@@ -52,6 +52,38 @@ public class FunctionTest {
         void testCsc(double x) {
             assertEquals(1 / Math.sin(x), csc.getValue(x, ACC), ACC);
         }
+
+        @ParameterizedTest
+        @ValueSource(doubles = {-1,0,-21,-PI})
+        @DisplayName("Check IllegalArgumentException when accuracy <= 0. Parameter is accuracy")
+        void testSinAccuracy(double x) {
+            Exception e = assertThrows(IllegalArgumentException.class, ()->sin.getValue(1,x));
+            assertEquals("Accuracy should be bigger than 0\n", e.getMessage());
+        }
+
+        @ParameterizedTest
+        @ValueSource(doubles = {-1,0,-21,-PI})
+        @DisplayName("Check IllegalArgumentException when accuracy <= 0. Parameter is accuracy")
+        void testCosAccuracy(double x) {
+            Exception e = assertThrows(IllegalArgumentException.class, ()->cos.getValue(1,x));
+            assertEquals("Accuracy should be bigger than 0\n", e.getMessage());
+        }
+
+        @ParameterizedTest
+        @ValueSource(doubles = {-1,0,-21,-PI})
+        @DisplayName("Check IllegalArgumentException when accuracy <= 0. Parameter is accuracy")
+        void testLnAccuracy(double x) {
+            Exception e = assertThrows(IllegalArgumentException.class, ()->ln.getValue(1,x));
+            assertEquals("Accuracy should be bigger than 0\n", e.getMessage());
+        }
+
+        @ParameterizedTest
+        @ValueSource(doubles = {0,-21,-PI})
+        @DisplayName("Check IllegalArgumentException when accuracy <= 0. Parameter is accuracy")
+        void testLnScope(double x) {
+            Exception e = assertThrows(IllegalArgumentException.class, ()->ln.getValue(x,ACC));
+            assertEquals("x should be > 0\n", e.getMessage());
+        }
     }
     @Nested
     class Integration{

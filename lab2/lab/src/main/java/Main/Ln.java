@@ -3,6 +3,9 @@ package Main;
 public class Ln extends Function{
     @Override
     public double getValue(double x, double exc) {
+        if(exc<=0){
+            throw new IllegalArgumentException("Accuracy should be bigger than 0\n");
+        }
         if(x <= 0){
             throw new IllegalArgumentException("x should be > 0\n");
         }
