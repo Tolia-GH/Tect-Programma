@@ -10,7 +10,7 @@ public class Ln extends Function{
             throw new IllegalArgumentException("x should be > 0\n");
         }
         if(x==Double.MAX_VALUE){
-            return Double.NEGATIVE_INFINITY;
+            return Double.POSITIVE_INFINITY;
         }else if(x==1){
             return 0;
         }
