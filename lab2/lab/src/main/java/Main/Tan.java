@@ -7,6 +7,9 @@ public class Tan extends Function{
     @Override
     public double getValue(double x, double exc) throws IllegalArgumentException {
         x = transferHalfPi(x);
+        if(x == Math.PI/2 || -x==Math.PI/2){
+            throw  new IllegalArgumentException("Tan(x), where x can't be (-)PI/2+2k*PI");
+        };
         if(Math.abs(x - Math.PI/2)<=0.000000000000001){
             if(x<0){
                 return Double.NEGATIVE_INFINITY;

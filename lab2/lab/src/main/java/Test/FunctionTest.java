@@ -88,7 +88,7 @@ public class FunctionTest {
     @Nested
     class Integration{
         Equtions equtions = new Equtions();
-        final Double ACC = 1.0;
+        final Double ACC = 0.1;
         @ParameterizedTest
         @ValueSource(doubles ={5,7,10,-100,0,55})
         void testEqutions(double x){

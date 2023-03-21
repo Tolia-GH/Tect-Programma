@@ -4,6 +4,12 @@ public abstract class Function {
     final private double PI = Math.PI;
 
     public abstract double getValue(double x, double exc) throws IllegalArgumentException;
+
+    /**
+     * translate x to [-PI,PI]
+     * @param x
+     * @return
+     */
     double transferToPi(double x){
         if(x >= 0 ){
             double result = x%(2*PI);
@@ -21,6 +27,11 @@ public abstract class Function {
             return result;
         }
     }
+    /**
+     * translate x to [-PI/2,PI/2]
+     * @param x
+     * @return
+     */
     double transferHalfPi(double x){
         if(x >= 0 ){
             double result = x%(PI);
