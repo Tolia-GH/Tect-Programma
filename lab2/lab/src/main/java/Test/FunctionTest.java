@@ -145,21 +145,6 @@ public class FunctionTest {
         }
     }
     @Nested
-    class Integration{
-        Equations equations = new Equations();
-        final Double ACC = 0.1;
-        @ParameterizedTest
-        @ValueSource(doubles ={5,7,10,-100,0,55})
-        void testEqutions(double x){
-            try {
-                equations.writeResultToCSV(x, equations.getValue(x, ACC), "src/main/java/Test/Resources/equations.csv");
-            }catch (IOException e){
-                System.out.println(e.getMessage());
-            }
-            assertEquals(equations.answer(x), equations.getValue(x,ACC),ACC);
-        }
-    }
-    @Nested
     class BasicFuntionsTest {
         Sin sin = new Sin();
         Cos cos = new Cos();
@@ -252,5 +237,21 @@ public class FunctionTest {
             assertEquals("x should be > 0\n", e.getMessage());
         }
     }
+    @Nested
+    class Integration{
+        Equations equations = new Equations();
+        final Double ACC = 0.1;
+        @ParameterizedTest
+        @ValueSource(doubles ={5,7,10,-100,0,55})
+        void testEqutions(double x){
+            try {
+                equations.writeResultToCSV(x, equations.getValue(x, ACC), "src/main/java/Test/Resources/equations.csv");
+            }catch (IOException e){
+                System.out.println(e.getMessage());
+            }
+            assertEquals(equations.answer(x), equations.getValue(x,ACC),ACC);
+        }
+    }
+
 
 }
