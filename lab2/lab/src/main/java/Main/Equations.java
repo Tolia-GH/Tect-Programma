@@ -1,11 +1,16 @@
 package Main;
 
 import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
 
-@NoArgsConstructor
-public class Equtions {
-    public double run(double x,double acc) throws IllegalArgumentException{
+@AllArgsConstructor
+public class Equations extends Function{
+    EquationB equationB;
+    EquationA equationA;
+    public Equations(){
+        equationB = new EquationB();
+        equationA = new EquationA();
+    }
+    public double getValue(double x,double acc) throws IllegalArgumentException{
         if(x<=0){
             return new EquationA().getValue(x,acc);
         }else {

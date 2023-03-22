@@ -1,13 +1,14 @@
 package Main;
 
-public class EquationB extends Function{
-    Sin sin = new Sin();
-    Cos cos = new Cos();
-    Ln ln = new Ln();
-    Tan tan = new Tan();
-    Sec sec = new Sec();
-    Csc csc = new Csc();
+import lombok.AllArgsConstructor;
 
+@AllArgsConstructor
+public class EquationB extends Function{
+    Ln ln;
+
+    public EquationB(){
+        ln = new Ln();
+    }
     public double getValue(double x, double exc) throws IllegalArgumentException {
         double lnx = ln.getValue(x,exc);
         double log10x = lnx/ln.getValue(10,exc);

@@ -1,12 +1,21 @@
 package Main;
 
+import lombok.AllArgsConstructor;
+
+@AllArgsConstructor
 public class EquationA extends Function{
-    Sin sin = new Sin();
-    Cos cos = new Cos();
-    Ln ln = new Ln();
-    Tan tan = new Tan();
-    Sec sec = new Sec();
-    Csc csc = new Csc();
+    Sin sin;
+    Cos cos;
+    Tan tan;
+    Sec sec;
+    Csc csc;
+    public EquationA(){
+        sin = new Sin();
+        cos = new Cos();
+        tan = new Tan();
+        sec = new Sec();
+        csc = new Csc();
+    }
     @Override
     public double getValue(double x, double exc) throws IllegalArgumentException {
         double sinx = sin.getValue(x,exc);
