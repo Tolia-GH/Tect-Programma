@@ -4,6 +4,9 @@ import Main.*;
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
+
+import java.io.IOException;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 public class FunctionTest {
@@ -22,6 +25,7 @@ public class FunctionTest {
         @ValueSource(doubles = {-1000,-10*PI,-2*PI,-1.5*PI,-0.5*PI,0,0.5*PI,1.5*PI,2*PI,10*PI,1000})
         void testSin(double x) {
             assertEquals(Math.sin(x), sin.getValue(x, ACC), ACC);
+
         }
 
         @ParameterizedTest

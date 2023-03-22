@@ -10,13 +10,13 @@ public class Sin extends Function{
         if(exc <= 0){
             throw new IllegalArgumentException("Accuracy should be bigger than 0\n");
         }
-        if(x==Math.PI||x==0){
+        if(x==Math.PI||x==0||x==-Math.PI){
             return 0;
         }
         if(x==Math.PI/2){
             return 1;
         }
-        if(x==Math.PI*3/2){
+        if(x==-Math.PI*1/2){
             return -1;
         }
         double lastResult = x;

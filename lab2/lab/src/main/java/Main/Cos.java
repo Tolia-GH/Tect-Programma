@@ -10,13 +10,13 @@ public class Cos extends Function{
         if(exc <= 0){
             throw new IllegalArgumentException("Accuracy should be bigger than 0\n");
         }
-        if(x==Math.PI/2||x==Math.PI*3/2){
+        if(x==Math.PI/2||x==-Math.PI*1/2){
             return 0;
         }
         if(x==0){
             return 1;
         }
-        if(x==Math.PI){
+        if(x==Math.PI||x==-Math.PI){
             return -1;
         }
         double lastResult = 1;
